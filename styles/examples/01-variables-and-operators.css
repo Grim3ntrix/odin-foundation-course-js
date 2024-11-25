@@ -1,0 +1,12 @@
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+span {
+font-style: italic;
+}
+
+.example-1 {
+    border: 2px solid yellow;
+    padding: 12px;
+}

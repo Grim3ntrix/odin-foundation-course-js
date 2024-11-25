@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundations Course (JS) - Variables and Operators</title>
+    <link rel="stylesheet" href="../../styles/examples/01-variables-and-operators.css">
+</head>
+<body>
+
+    <h3>The output is in the console type <span>"Ctrl + Shift + i"</span>, also known as inspect elements. Navigate to the console.</h3>
+
+    <p>Note: This page is only for my personal testing to perform the examples given by the course (the odin project).</p>
+    <p>If you like to read the complete example go to this link <a href="https://www.theodinproject.com/lessons/foundations-variables-and-operators">01-variables-and-operators</a></p>
+
+    <script>
+        console.log("Hello World!");
+
+        
+        console.log("You can declare variables using the let keyword. Let’s try it! (No pun intended):");
+
+        let name = "John";
+        let surname = "Doe";
+
+        console.log(name);
+        console.log(surname);
+
+        console.log("You can also re-assign variables:");
+
+        let age = 11;
+        console.log(age); // outputs 11 to the console
+
+        age = 54;
+        
+        console.log(age); // what will be output now?
+
+        console.log("We might have a constant pi which will never change. We can accomplish this using the const keyword.:");
+
+        const pi = 3.14;
+        pi = 10;
+
+        console.log(pi); // What will be output?... Upon testing this will throw an error. So, Let's avoid reassigning constants because it should not be change.
+
+    </script>
+</body>
+</html>

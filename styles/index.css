@@ -1,0 +1,72 @@
+.container {
+    display: flex;
+}
+
+.container div {
+    background: #f8f8f8;
+    border: 4px solid rgb(238, 196, 11);
+    height: 100px;
+    flex: 1; 
+    height: auto;
+    background-image: url("https://www.transparenttextures.com/patterns/notebook-dark.png");
+}   
+
+.container .exercises {
+    border-radius: 10px 0px 0px 10px;
+}
+
+.container .examples {
+    border-radius: 0px 10px 10px 0px;
+}
+
+h3 {
+    padding: 8px;
+}
+
+.header {
+    display: flex;
+    /* border: 2px solid blue; */
+}
+
+.header-title {
+    flex: 1; 
+    /* border: 2px solid blue; */
+}
+
+.header-title p {
+    font-size: 12px;
+}
+
+.student {
+    flex: 1;
+}
+
+.student p {
+    flex: 1; 
+    padding: 8px;
+    text-align: right;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.span-container {
+    display: flex;
+}
+
+.span-container {
+    /* border: 2px solid blue; */
+    justify-content: end;
+}
+
+.student span {
+    /* border: 2px solid blue; */
+    padding: 8px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* * {
+    outline: 2px solid red;
+} */

@@ -1,4 +1,4 @@
-# Intro to JavaScript
+# Intro to JS (JavaScript)
 
 ## Introduction
 

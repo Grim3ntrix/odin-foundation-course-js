@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundations Course (JS) - Variables and Operators - Assignment</title>
+    <style>body {font-family: Arial, Helvetica, sans-serif;} li {padding: 4px;} span {font-style: italic;}</style>
+</head>
+<body>
+
+    <h3>The output is in the console type <span>"Ctrl + Shift + i"</span>, also known as inspect elements. Navigate to the console.</h3>
+
+    <div class="container">
+        <h3>Assignment</h3>
+        <div>
+            <h5>Try the following exercises (and don't forget to use <i>"console.log()"</i> ):</h5>
+            <ol>
+                <li>
+                    Add 2 numbers together! (just type console.log(23 + 97) into your HTML file or the browser console)
+                </li>
+                <li>
+                    Add a sequence of 6 different numbers together.
+                </li>
+                <li>
+                    Print the value of the following expression: (4 + 6 + 9) / 77
+                </li>
+                <ul>
+                    <li>Answer should be approximately 0.24675</li>
+                </ul>
+                <li>
+                    Let’s use variables!
+                </li>
+                <ul>
+                    <li>Type this statement at the top of the script tag: let a = 10</li>
+                    <li>In the console console.log(a) should print 10</li>
+                    <li>Try the following in the console: 9 * a</li>
+                    <li>Now try typing this in the console: let b = 7 * a (returns undefined *) and then console.log(b)</li>
+                </ul>
+                <li>
+                    Try this sequence:
+                </li>
+                <ul>
+                    <li>Declare a constant variable max with the value 57</li>
+                    <li>Set another variable actual to max - 13</li>
+                    <li>Set another variable percentage to actual / max</li>
+                    <li>If you type percentage in the console and press Enter you should see a value like 0.7719</li>
+                </ul>
+                <li>
+                    Take a few minutes to keep playing around with various things in your script tag. Eventually, we will learn how to actually make those numbers and things show up on the webpage, but all of this logic will remain the same, so make sure you’re comfortable with it before moving on.
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        console.log(23 + 97);
+        console.log(1 + 2 + 3 + 4 + 5 + 6);
+        console.log((4+6+9)/77);
+
+        let a = 10;
+        console.log(a);
+
+        const max = 57;
+        const actual = max - 13;
+        const percentage = actual/max;
+        
+        console.log(percentage);
+
+    </script>
+</body>
+</html>
