@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foundations Course (JS) - Variables and Operators - Assignment</title>
-    <style>body {font-family: Arial, Helvetica, sans-serif;} li {padding: 4px;} span {font-style: italic;}</style>
+    <style>body {font-family: Arial, Helvetica, sans-serif;} li {padding: 4px;} span {font-style: italic;} 
+    h3 {
+        background-color: rgb(141, 141, 141);
+        padding: 12px;
+        border-radius: 8px;
+        color: rgb(255, 253, 253);
+    }
+    
+    .content {
+        padding: 0 12px;
+    }</style>
 </head>
 <body>
 
     <h3>The output is in the console type <span>"Ctrl + Shift + i"</span>, also known as inspect elements. Navigate to the console.</h3>
 
     <div class="container">
-        <h3>Assignment</h3>
-        <div>
+        <h3>Assignment:</h3>
+        <div class="content">
             <h5>Try the following exercises (and don't forget to use <i>"console.log()"</i> ):</h5>
             <ol>
                 <li>
@@ -51,6 +61,9 @@
             </ol>
         </div>
     </div>
+    <div class="reference">
+        <h5>A quick best article to read: <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math">MDN-Javascript Math</a></h5>
+    </div>
 
     <script>
         console.log(23 + 97);
@@ -65,6 +78,8 @@
         const percentage = actual/max;
         
         console.log(percentage);
+
+        console.log("To round into a fixed number use toFixed(), so instead of having 0.7719298245614035 we can round it into two decimal using toFixed():", percentage.toFixed(2));
 
     </script>
 </body>

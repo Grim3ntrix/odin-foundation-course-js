@@ -10,3 +10,14 @@ font-style: italic;
     border: 2px solid yellow;
     padding: 12px;
 }
+
+h3 {
+    background-color: rgb(141, 141, 141);
+    padding: 12px;
+    border-radius: 8px;
+    color: rgb(255, 253, 253);
+}
+
+.content {
+    padding: 0 12px;
+}
