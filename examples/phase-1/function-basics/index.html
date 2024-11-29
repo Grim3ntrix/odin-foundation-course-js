@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundations Course (JS) - Variables and Operators</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+</head>
+<body>
+
+    <h3>The output is in the console type <span>"Ctrl + Shift + i"</span>, also known as inspect elements. Navigate to the console.</h3>
+
+    <div class="content">
+        <h4>Note:</h4>
+        <ul>
+            <li>This page is only for my personal testing to perform the examples given by the course (the odin project).</li>
+            <li>If you like to read the complete example go to this link <a target="_blank" href="https://www.theodinproject.com/lessons/foundations-function-basics">function-basics</a></li>
+        </ul>
+    </div>
+
+    <h3>The MDN Example Output should appear below:</h3>
+
+    <div class="content">
+        <h4>Info:</h4>
+        <ul>
+            <li>MDN article on functions: <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions#function_scope_and_conflicts">Function scope conflicts</a></li>
+        </ul>
+    </div>
+
+    <h3>Recommended articles to read:</h3>
+    <div class="content">
+        <ol>
+            <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Return_values">Return values</a></li>
+            <li><a target="_blank" href="http://javascript.info/function-basics">Function basics from Javascript.info</a></li>
+            <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Return_values">Return values</a></li>
+            <li><a target="_blank" href="http://javascript.info/function-expressions">Function expressions...(Note: Function is a value that's why we can store it in the variable)</a></li>
+            <li><a target="_blank" href="http://javascript.info/arrow-functions-basics">Arrow function</a></li>
+            <li><a target="_blank" href="https://www.javascripttutorial.net/javascript-call-stack/">JavaScript Call Stack</a></li>
+        </ol>
+    </div>
+
+    <h3>Knowledge Check:</h3>
+    <div class="content">
+        <ol>
+            <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions">What are functions useful for?</a></li>
+            <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions#invoking_functions">How do you invoke a function?</a></li>
+            <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions#anonymous_functions_and_arrow_functions">What are anonymous functions?</a></li>
+            <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions#function_scope_and_conflicts">What is function scope?</a></li>
+            <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Return_values#what_are_return_values">What are returned values?</a></li>
+            <li><a target="_blank" href="https://javascript.info/arrow-functions-basics">What are arrow functions?</a></li>
+            <li><a target="_blank" href="https://javascript.info/function-expressions#function-expression-vs-function-declaration">What is the difference between a function declaration and a function expression?</a></li>
+        </ol>
+    </div>
+
+    <h3>Additional resources:</h3>
+    <div class="content">
+        <ol>
+            <li><a target="_blank" href="https://chatgpt.com/share/6749d46e-2a6c-8011-82cf-a189bd48f7ab">Anonymous vs Arrow Functions</a></li>
+            <li><a target="_blank" href="https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var#:~:text=The%20main%20difference%20is%20scoping,(hence%20the%20block%20scope)">What’s the difference between using “let” and “var”? - stackoverflow</a></li>
+            <li><a target="_blank" href="https://youtu.be/iLWTnMzWtj4">How JavaScript Code is executed?</a></li>
+        </ol>
+    </div>
+
+    <script>
+
+        function favoriteAnimal(animal) {
+            return animal + " is my fevorite animal!"
+        }
+        console.log(favoriteAnimal('Cat'));
+        
+        // Example from MDN: https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-scope.html
+
+        const x = 1;
+
+        function a() {
+        const y = 2;
+        }
+
+        function b() {
+        const z = 3;
+        }
+
+        function output(value) {
+        const para = document.createElement('p');
+        document.body.appendChild(para);
+        para.textContent = `Value: ${value}`;
+        }
+
+    </script>
+</body>
+</html>
