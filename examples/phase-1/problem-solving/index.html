@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundations Course (JS) - problem Solving</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+</head>
+<body>
+
+    <h3>The output is in the console type <span>"Ctrl + Shift + i"</span>, also known as inspect elements. Navigate to the console.</h3>
+
+    <div class="content">
+        <h4>Note:</h4>
+        <ul>
+            <li>This page is only for my personal testing to perform the examples given by the course (the odin project).</li>
+            <li>If you like to read the complete example go to this link <a target="_blank" href="https://www.theodinproject.com/lessons/foundations-problem-solving">problem-solving</a></li>
+        </ul>
+    </div>
+
+    <h3>Knowledge Check:</h3>
+    <div class="content">
+        <ol>
+            <li><a target="_blank" href="https://www.theodinproject.com/lessons/foundations-problem-solving#knowledge-check">Reflect into the knowledge you've learn</a></li>
+        </ol>
+    </div>
+
+    <h3>Additional resources:</h3>
+    <div class="content">
+        <ol>
+            <li><a target="_blank" href="https://www.theodinproject.com/lessons/foundations-problem-solving#additional-resources">This will navigate you into the additional resources</a></li>
+        </ol>
+    </div>
+
+    <script>
+        let number = parseInt(prompt('Please input a number:'));
+
+        for (let i = 1; i <= number; i++) {
+            if (i % 3 === 0 && i % 5 === 0) {
+                console.log('FizzBuzz');
+            } else if (i % 3 === 0) {
+                console.log('Fizz');
+            } else if (i % 5 === 0) {
+                console.log('Buzz');
+            } else {
+                console.log(i);
+            }
+        }
+        
+    </script>
+</body>
+</html>
