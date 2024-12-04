@@ -122,6 +122,6 @@ Visit the repository here: [Odin Recipes Repo](https://github.com/Grim3ntrix/odi
 
 Visit the repository here: [Exercises and Examples Repo](https://github.com/Grim3ntrix/odin-foundation-course-css).
 
-* CSS Project - Landing Page  - [Florist Landing Page](grim3ntrix.github.io/florist-landing-page/).
+* CSS Project - Landing Page  - [Florist Landing Page](https://grim3ntrix.github.io/florist-landing-page/).
 
 Visit the repository here: [Florist Landing Page Repo](https://github.com/Grim3ntrix/florist-landing-page).
