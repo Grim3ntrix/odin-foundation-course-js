@@ -514,7 +514,7 @@ console.log("*** The slice() method slices out a piece of an array into a new ar
 
 const arrH = ['a', 'b', 'c', 'd'];
 console.log("arrH: ", arrH);
-const slice = arrH.slice(1);
+const slice = arrH.slice(0);
 console.log("slice: ", slice);
 console.log("NOTE: ");
 console.log("The slice() method creates a new array.");
@@ -552,6 +552,24 @@ const arrL = ["Banana", "Orange", "Apple", "Mango"];
 console.log("arrL: ", arrL);
 document.getElementById("arrL").innerHTML = fruits;
 console.log("\n");
+
+console.log("\n");
+console.log("*********************************************");
+console.log("String Split");
+console.log("*********************************************");
+console.log("\n");
+
+console.log("The split() method splits a string into an array of substrings.");
+console.log("The split() method returns the new array.");
+console.log("The split() method does not change the original string.");
+console.log("If ('') is used as separator, the string is split between words.");
+console.log("\n");
+let text = "How are you doing today?";
+const split = text.split("");
+console.log("\n");
+console.log("text: ", text);
+console.log("\n");
+console.log("split: ", split);
 
 console.log("Note: ");
 console.log("All JavaScript objects have a toString() method.");

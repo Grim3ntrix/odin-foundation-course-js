@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundations Course (JS) - DOM Methods</title>
+    <!-- <link rel="stylesheet" href="../../../styles/style.css"> -->
+    <style>
+        li {
+        margin-bottom: 10px;
+        }
+
+        li button {
+        font-size: 12px;
+        margin-left: 20px;
+        color: #666;
+        }
+    </style>
+</head>
+<body>
+  <h3>Note</h3>
+  <ul>
+    <li>If you like to read the complete exercise-guide go to this link "<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting#active_learning_a_dynamic_shopping_list">Full Exercise Guide</a>"</li>
+  </ul>
+  
+  <hr>
+
+  <u><h3>Active Learning</h3> </u>
+
+  <h1>My shopping list</h1>
+
+  <div>
+    <label for="item">Enter a new item:</label>
+    <input type="text" name="item" id="item">
+    <button id="add-item">Add item</button>
+  </div>
+
+  <ul id="item-list">
+
+  </ul>
+  
+  <script>
+
+    const itemList = document.querySelector("#item-list");
+    const itemInput = document.querySelector("#item");
+    const addItem = document.querySelector("#add-item");
+
+    function addItemList() {
+      let valueOfInput = itemInput.value;
+
+      const li = document.createElement("li");
+      const span = document.createElement("span");
+      const delBtn = document.createElement("button");
+
+      itemList.appendChild(li);
+
+      span.textContent = valueOfInput;
+      li.appendChild(span);
+
+      delBtn.textContent = "Delete";
+      li.appendChild(delBtn);
+
+      itemInput.value = '';
+
+      delBtn.addEventListener("click", () => {
+        li.remove();
+        itemInput.focus();
+      });
+    }
+
+    addItem.addEventListener("click", addItemList);
+    
+  </script>
+</body>
+</html>

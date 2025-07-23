@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundations Course (JS) - DOM Methods</title>
+    <link rel="stylesheet" href="../../../../styles/style.css">
+</head>
+<body>
+    <h3>Note</h3>
+    <div class="content">
+        <ul>
+            <li>This page is only for my personal testing to perform the examples given by the course (the odin project).</li>
+            <li>If you like to read the complete example go to this link <a href="https://www.theodinproject.com/lessons/foundations-dom-manipulation-and-events#dom-methods">DOM Methods</a></li>
+        </ul>
+    </div>
+    
+    <div id="container"></div>
+
+    <script>
+
+        const container = document.querySelector("#container");
+
+        const content = document.createElement("div");
+
+        content.classList.add("content");
+        content.textContent = "This is the glorious text-content!";
+        container.appendChild(content);
+
+    </script>
+</body>
+</html>

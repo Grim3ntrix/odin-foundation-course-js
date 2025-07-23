@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundations Course (JS) - DOM Methods</title>
+    <link rel="stylesheet" href="../../../../styles/style.css">
+</head>
+<body>
+    <h3>Note</h3>
+    <div class="content">
+        <ul>
+            <li>This page is only for my personal testing to perform the examples given by the course (the odin project).</li>
+            <li>If you like to read the complete example go to this link <a href="https://www.theodinproject.com/lessons/foundations-dom-manipulation-and-events#dom-methods">DOM Methods</a></li>
+        </ul>
+    </div>
+
+    <h3>Examples</h3>
+    <h4>1. Altering elements</h4>
+    <p>
+        // creates a new div referenced in the variable 'div'
+        <span style="background-color: rgb(104, 10, 85); padding: 5px; color: white; border-radius: 5px;">const div = document.createElement("div");</span>
+    </p>
+
+    <h4>2. Adding inline style</h4>
+    
+    <p>
+        // adds the indicated style rule to the element in the div variable
+        <span style="background-color: rgb(104, 10, 85); padding: 5px; color: white; border-radius: 5px;">div.style.color = "blue";</span>
+    </p>
+        <br>
+    <p> 
+        // adds several style rules
+        <span style="background-color: rgb(104, 10, 85); padding: 5px; color: white; border-radius: 5px;">div.style.cssText = "color: blue; background: white;";</span>
+    </p>
+        <br>
+    <p>
+        // adds several style rules
+        <span style="background-color: rgb(104, 10, 85); padding: 5px; color: white; border-radius: 5px;">div.setAttribute("style", "color: blue; background: white;");</span>
+    </p>
+
+    <hr>
+    <h3>Quick Note</h3>
+    <p>
+        When accessing a kebab-cased CSS property like <span>background-color</span> with JS, you will  need to either use <u>camelCase</u> with <u>dot notation</u> or <u>bracket notation</u>.
+    </p>
+    <p>
+        When using bracket notation, you can use either camelCase or kebab-case, but the property name must be a string.
+    </p>
+
+    <h4>Example</h4>
+    <p>| wrong way |</p>
+    <p>// dot notation with kebab case: doesn't work as it attempts to subtract color from div.style.background</p>
+    <p>// equivalent to: div.style.background - color</p>
+    <p><span style="background-color: rgb(104, 10, 85); padding: 5px; color: white; border-radius: 5px;">div.style.background-color;</span></p>
+
+    <p>| correct way |</p>
+    <p>// dot notation with camelCase: works, accesses the div's background-color style</p>
+    <p><span style="background-color: rgb(104, 10, 85); padding: 5px; color: white; border-radius: 5px;">div.style.backgroundColor;</span></p>
+    <p>// bracket notation with kebab-case: also works</p>
+    <p><span style="background-color: rgb(104, 10, 85); padding: 5px; color: white; border-radius: 5px;">div.style["background-color"];</span></p>
+    <p>// bracket notation with camelCase: also works</p>
+    <p><span style="background-color: rgb(104, 10, 85); padding: 5px; color: white; border-radius: 5px;">div.style["backgroundColor"];</span></p>
+    
+    <hr>
+
+    <h4>3. Editing attributes</h4>
+
+    <p>// if id exists, update it to 'theDiv', else create an id with value "theDiv"</p>
+    <p><span style="background-color: rgb(104, 10, 85); padding: 5px; color: white; border-radius: 5px;">div.setAttribute("id", "theDiv");</span></p>
+
+    <p>// returns value of specified attribute, in this case "theDiv"</p>
+    <p><span style="background-color: rgb(104, 10, 85); padding: 5px; color: white; border-radius: 5px;">div.getAttribute("id");</span></p>
+
+    <p>// removes specified attribute</p>
+    <p><span style="background-color: rgb(104, 10, 85); padding: 5px; color: white; border-radius: 5px;">div.removeAttribute("id");</span></p>
+
+    <h4>4. Working with classes</h4>
+
+    <p>// adds class "new" to your new div</p>
+    <p><span style="background-color: rgb(104, 10, 85); padding: 5px; color: white; border-radius: 5px;">div.classList.add("new");</span></p>
+
+    <p>// removes "new" class from div</p>
+    <p><span style="background-color: rgb(104, 10, 85); padding: 5px; color: white; border-radius: 5px;">div.classList("remove");</span></p>
+
+    <p>// if div doesn't have class "active" then add it, or if it does, then remove it</p>
+    <p><span style="background-color: rgb(104, 10, 85); padding: 5px; color: white; border-radius: 5px;">div.classList.toggle("active");</span></p>
+
+    <p><u>Note</u>: It is often standard (and cleaner) to toggle a CSS style rather than adding and removing inline CSS.</p>
+
+    <h4>5. Adding text content</h4>
+
+    <p>// creates a text node containing "Hello World!" and inserts it in div</p>
+    <p><span style="background-color: rgb(104, 10, 85); padding: 5px; color: white; border-radius: 5px;">div.textContent = "Hello World!";</span></p>
+    
+    <h4>6. Adding HTML content</h4>
+
+    <p>// renders the HTML inside div</p>
+    <p><span style="background-color: rgb(104, 10, 85); padding: 5px; color: white; border-radius: 5px;">div.innerHTML = "<span>Hello World!</span>";</span></p>
+
+    <p><u>Note</u>: Note that using textContent is preferred over innerHTML for adding text, as innerHTML should be used sparingly to avoid potential security risks. To understand the dangers of using innerHTML, watch this <a target="_blank" href="https://youtube.com/watch?v=ns1LX6mEvyM">video about preventing the most common cross-site scripting attack.</a>
+
+    </p>
+
+    <hr>
+    <h3>Practice</h3>
+
+    <p>Check out this example of creating and appending a DOM element to a webpage: <a href="./practice.html">practice</a></p>
+
+    <script>
+
+
+    </script>
+</body>
+</html>

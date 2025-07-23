@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundations Course (JS) - DOM Methods</title>
+    <link rel="stylesheet" href="../../../../styles/style.css">
+</head>
+<body>
+    <h3>Note</h3>
+    <div class="content">
+        <ul>
+            <li>This page is only for my personal testing to perform the examples given by the course (the odin project).</li>
+            <li>You can inspect element the source code using <b><u><i>Ctrl + Shift + i</i></b></u> </li>
+            <li>If you like to read the complete example go to this link <a href="https://www.theodinproject.com/lessons/foundations-dom-manipulation-and-events#attaching-listeners-to-groups-of-nodes">Attaching listeners to groups of nodes</a></li>
+        </ul>
+    </div>
+
+    <h3>Practice</h3>
+    <div id="container">
+        <button id="one">Click Me</button>
+        <button id="two">Click Me</button>
+        <button id="three">Click Me</button>
+    </div>
+
+    <script>
+        // buttons is a node list. It looks and acts much like an array
+        const buttons = document.querySelectorAll("button");
+
+        // we use the .forEach method to iterate through each button
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+                alert(button.id);
+            });
+        });
+      
+    </script>
+</body>
+</html>

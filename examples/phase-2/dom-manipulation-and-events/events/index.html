@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundations Course (JS) - DOM Manipulation and Events</title>
+    <link rel="stylesheet" href="../../../../styles/style.css">
+</head>
+<body>
+    <h3>Note</h3>
+    <div class="content">
+        <ul>
+            <li>This page is only for my personal testing to perform the examples given by the course (the odin project).</li>
+            <li>If you like to read the complete example go to this link <a href="https://www.theodinproject.com/lessons/foundations-dom-manipulation-and-events#events">Events</a></li>
+            <li>You can inspect element the source code using <b><u><i>Ctrl + Shift + i</i></b></u> </li>
+        </ul>
+    </div>
+
+<h3>Examples</h3>
+
+<h4>Method 1 (Inline JS)</h4>
+
+<button onclick="alert('Hello World!')">Click Me 1st</button>
+
+<h4>Method 2 (Arrow Function)</h4>
+
+<button id="btn-2">Click Me 2nd</button>
+
+<h4>Method 3 (EventListener)</h4>
+
+<button id="btn-3">Click Me 3rd</button>
+
+<h3>Quick Note</h3>
+<div class="content">
+    <ul>
+        <li>Note that all three of these methods can be used with named functions like so:</li>
+    </ul>
+</div>
+
+<h4>Method 1</h4>
+
+<button onclick="alertFunction()">CLICK ME BABY!</button>
+
+<h4>Method 2-3</h4>
+
+<button id="btn-4">CLICK ME AGAIN BABY!</button>
+
+<button id="btn-5">CLICK ME LAST BABY!</button>
+
+<h3>In Additional</h3>
+<ul>
+    <li>Using named functions can clean up your code considerably, and is a really good idea if the function is something that you are going to want to do in multiple places.</li>
+    <li>With all three methods, we can access more information about the event by passing a parameter to the function that we are calling. Try this out on your own machine:</li>
+</ul>
+
+<button id="btn-6">WAIT! GO INTO THE BROWSER CONSOLE AND CLICK ME!</button>
+
+<ul>
+    <li>When we pass in alertFunction or function (e) {...} as an argument to addEventListener, we call this a callback. A <b><i><u>callback</u></i></b> is simply a function that is passed into another function as an argument.</li>
+    <li>The <b><i><u>e</u></i></b> parameter in that callback function contains an object that references the event itself. Within that object you have access to many useful properties and methods (functions that live inside an object) such as which <b><i><u>mouse</u></i></b> button or <b><i><u>key</u></i></b> was pressed, or <b><i><u>information about the event’s target</u></i></b> - the DOM node that was clicked. There’s nothing magical about <b><i><u>e</u></i></b> as a name or where it comes from. JavaScript knows the parameter is an event because an event listener callback takes an Event object by definition. When the callback is run, the event handler passes in its own reference to the event. You can read more about the event objects on <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Events#event_objects">MDN’s introduction to events.</a></li>
+</ul>
+
+<h4>Try this:</h4>
+<button id="btn-7">Click Me!</button>
+
+<h4>and now this:</h4>
+<button id="btn-8">Click Me!</button>
+
+<h3>Practice</h3>
+<p>Check out this example of <u>Attaching listeners to groups of nodes</u> to a webpage: <a href="./practice.html">practice</a></p>
+<script>
+    const btn2 = document.querySelector("#btn-2");
+    btn2.onclick = () => alert('Hello World!');
+
+    const btn3 = document.querySelector("#btn-3");
+    btn3.addEventListener("click", () => {
+        alert("Hello World!");
+    });
+
+    // --------------------------------------------
+
+    function alertFunction() {
+        alert("YAY! YOU DID IT!");
+    }
+
+    // Method 2
+    const btn4 = document.querySelector("#btn-4");
+    btn4.onclick = alertFunction;
+
+    // Method 3
+    const btn5 = document.querySelector("#btn-5");
+    btn5.addEventListener("click", alertFunction);
+
+    // In Additional
+
+    const btn6 = document.querySelector("#btn-6");
+    btn6.addEventListener("click", function (e) {
+        console.log(e);
+    });
+
+    // --------------------------------------------
+
+    const btn7 = document.querySelector("#btn-7");
+    btn7.addEventListener("click", function (e) {
+        console.log(e.target);
+    });
+
+    const btn8 = document.querySelector("#btn-8");
+    btn8.addEventListener("click", function (e) {
+        e.target.style.background = "blue";
+    });
+</script>
+</body>
+</html>
